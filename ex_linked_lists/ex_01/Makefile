@@ -2,7 +2,7 @@
 # VARIABLES
 
 # Define the output binary name
-NAME	:= lstadd_back
+NAME	:= lstadd_front
 
 # Define the flags for the compiler
 CFLAGS	:= -Wall -Wextra -Werror

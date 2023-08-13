@@ -254,13 +254,13 @@ AUCUNE fonction de doit bugger si la liste est vide.
 
 ## ex_00
 
-Creer une fonction `void lstadd_front(t_list **lst, t_list *new)` 
+Creer une fonction `void lstadd_back(t_list **lst, t_list *new)` 
 
 Elle ajoutera new a la fin de la liste.
 
 ## ex_01
 
-Creer une fonction `void lstadd_back(t_list **lst, t_list *new)` 
+Creer une fonction `void lstadd_front(t_list **lst, t_list *new)` 
 
 Elle ajoutera new au début de la liste.
 
