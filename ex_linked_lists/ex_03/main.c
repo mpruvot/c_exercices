@@ -58,21 +58,21 @@ void lstadd_back(t_list **lst, t_list *new)
 
 void lst_reverse(t_list **lst)
 {
-    t_list *current = NULL;
-    t_list *prec = NULL;
+
+    t_list *prev = NULL;
     t_list *next = NULL;
 
-    current = *lst;
 
     if(!*lst)
         return;
-    while (current)
+    while (*lst != NULL)
     {
-        next = current->next;
-        prec = current;
-        current = next;
+        next = (*lst)->next ;
+        (*lst)->next = prev;
+        prev = *lst;
+        *lst = next;
     }
-    
+    *lst = prev; // Màj de la tête de lecture.
 }
 
 int main()
