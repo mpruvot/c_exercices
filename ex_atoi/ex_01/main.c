@@ -17,9 +17,23 @@ int is_negative(char c)
     else return 0;
 }
 
+int valid_base(char *str)
+{
+    int i;
+
+    i = 0;
+    while (str[i])
+    {
+        if (str[i] < 33 || str[i] > 126)
+            return 0;
+        i++;
+    }
+    return 1;
+}
+
 int ft_atoi_base(char *str, char *base)
 {
-    if (!str || !base)
+    if (!str || !base || !valid_base(base))
         return(0);
         
     int base_len; // Ici on stock lalongeur de base
@@ -39,7 +53,7 @@ int ft_atoi_base(char *str, char *base)
         i++;
     }
     
-    base_len = my_strlen(base); // on enleve 'i' pour que les signes ou espaces ne soient pas pris en compte.
+    base_len = my_strlen(base); 
 
     while (str[i] && !is_space(str[i])) // Tant que str est vrai et que cest pas un espace on va parcourir str
     {
